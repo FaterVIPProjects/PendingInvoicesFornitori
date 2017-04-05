@@ -92,8 +92,7 @@
 						"sap-client": "209"
 					}
 				},
-				"dataSource": "ZVIP_PROJECT_SRV",
-				"preload": true
+				"dataSource": "ZVIP_PROJECT_SRV"
 			},
 			"oPTModel": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
@@ -108,8 +107,7 @@
 						"sap-client": "209"
 					}
 				},
-				"dataSource": "ZVIP_PAYMENTTRACK_SRV",
-				"preload": true
+				"dataSource": "ZVIP_PAYMENTTRACK_SRV"
 			}
 		},
 		"resources": {
