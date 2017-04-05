@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "Pending Invoices App",
+        "description": "Pending Invoices Report App",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#faterpendinginvoices-Display",
+        "navigationComponentName": "org.fater.app",
+        "intentSemanticObject": "fater-pending-invoices",
+        "intentAction": "Display",
+        "html5ApplicationName": "faterpendinginvoices",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "00000000-0000-1111-0000-00000000"
+        ],
+        "contentPackages": [
+            "0b49f7d3-bdbb-4e7f-8da8-8d6ea5eaca69-1471426089940"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Pending Invoices",
+        "subtitle": "Pending Invoices App",
+        "searchKeywords": "Pending Invoices,Pending Invoices App",
+        "displayIconUrl": "sap-icon://sales-document",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
