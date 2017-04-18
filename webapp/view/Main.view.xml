@@ -21,7 +21,9 @@
 						filterContainerWidth="23%"
 						showRestoreButton="true" 
 						showClearButton="false"
-						showClearOnFB="false">
+						showClearOnFB="false"
+						advancedMode="true"
+						>
 						
 						<fb:filterItems>
 							
@@ -120,7 +122,9 @@
 					
 					<a:ObjectPageLayout id="detailPage"
 						alwaysShowContentHeader="true"
-						sections="{/invoices}">
+						sections="{/invoices}"
+						height="85%"
+						>
 						<a:sections>
 							<a:ObjectPageSection visible="{visible}">
 								<a:subSections>

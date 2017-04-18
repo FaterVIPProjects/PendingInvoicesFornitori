@@ -80,32 +80,22 @@
 				}
 			},
 			"oDataModel": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
+				"type": "sap.ui.model.odata.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneTime",
 					"defaultCountMode": "None",
-					"useBatch": false,
-					"headers": {
-						"X-Requested-With": "X",
-						"Content-Type": "application/json",
-						"sap-client": "209"
-					}
+					"useBatch": false
 				},
 				"dataSource": "ZVIP_PROJECT_SRV"
 			},
 			"oPTModel": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
+				"type": "sap.ui.model.odata.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneTime",
 					"defaultCountMode": "None",
-					"useBatch": false,
-					"headers": {
-						"X-Requested-With": "X",
-						"Content-Type": "application/json",
-						"sap-client": "209"
-					}
+					"useBatch": false
 				},
 				"dataSource": "ZVIP_PAYMENTTRACK_SRV"
 			}
