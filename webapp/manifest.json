@@ -85,7 +85,11 @@
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneTime",
 					"defaultCountMode": "None",
-					"useBatch": false
+					"useBatch": false,
+					"headers": {
+						"X-Requested-With": "X",
+						"Content-Type": "application/json"
+					}
 				},
 				"dataSource": "ZVIP_PROJECT_SRV"
 			},
@@ -95,17 +99,19 @@
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneTime",
 					"defaultCountMode": "None",
-					"useBatch": false
+					"useBatch": false,
+					"headers": {
+						"X-Requested-With": "X",
+						"Content-Type": "application/json"
+					}
 				},
 				"dataSource": "ZVIP_PAYMENTTRACK_SRV"
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		}
 	},
 	"sap.platform.hcp": {

@@ -125,12 +125,40 @@ sap.ui.define([
 
 		_handleSuggest: function(oEvent) {
 			var sTerm = oEvent.getParameter("suggestValue");
-			var aFilters = [];
+			// FIX AS: Quando scrivo un testo, lo devo salvare nella ricerca eventuale in popup
+			if (sTerm)
+				this._supplierSearch = sTerm;
+
 			if (sTerm.length >= 3) {
-				aFilters.push(new Filter("supplierName", sap.ui.model.FilterOperator.Contains, sTerm));
+				/*
+				var aFilters = []; 	
+				aFilters.push(new Filter("supplierName", sap.ui.model.FilterOperator.Contains, sTerm)); 					
 				oEvent.getSource().getBinding("suggestionItems").filter(aFilters);
+				*/
+				// FIX AS: Gestione del doppio filtro Ragione Sociale | ID Fornitore.
+				// NOTA: Il filtro in OR non funziona, in quanto stiamo filtrando non su più colonne, ma su più
+				// valori dello stesso campo. Per questo motivo, dato un pattern di ricerca, bisogna capire se
+				// sto inserendo una Ragione Sociale (Pattern alfanumerico) o un ID (Solo cifre)
+				var aFilters = [];
+				var filter1;
+				if (!isNaN(this._supplierSearch)) {
+					filter1 = new Filter("supplierId", sap.ui.model.FilterOperator.Contains, this._supplierSearch);
+					aFilters = new sap.ui.model.Filter({
+						filters: [filter1],
+						or: true
+					});
+				} else {
+					filter1 = new Filter("supplierName", sap.ui.model.FilterOperator.Contains, this._supplierSearch);
+					aFilters = new sap.ui.model.Filter([filter1]);
+				}
+
+				oEvent.getSource().getBinding("suggestionItems").filter(aFilters);
+				var cocdInput = this.getView().byId("supplierFilterInput");
+				cocdInput.setShowSuggestion(true);
+				cocdInput.setFilterSuggests(false);
+				cocdInput.removeAllSuggestionItems();
 			} else {
-				return null;
+				// return null;
 			}
 		},
 
@@ -710,7 +738,7 @@ sap.ui.define([
 				var total = oBundle.getText("total") + ": " + utils.getTotal(aLines);
 
 				//Set Report title in first row or line
-				sCSV += sReportTitle + ';;;;;;;;' + total + '\r\n';
+				sCSV += sReportTitle + ';;;;;' + total + '\r\n';
 				sCSV += oBundle.getText("paymentConditionLabel") + ": " + sPaymentConditions + '\r\n';
 
 				// AS - FIX bug #009: Stampa della società
