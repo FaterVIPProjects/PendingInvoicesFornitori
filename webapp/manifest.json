@@ -2,7 +2,7 @@
 	"_version": "1.1.0",
 	"sap.app": {
 		"_version": "1.1.0",
-		"id": "org.fater.app",
+		"id": "org.fater.pendinginvoicessupplier",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -109,9 +109,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
 	},
 	"sap.platform.hcp": {

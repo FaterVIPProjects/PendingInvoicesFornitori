@@ -1,0 +1,162 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<HBox>
+		<l:Grid defaultSpan="L12 M12 S12">
+			<!--HEADER TABLE-->
+			<Table class="tableHeader sapUiSizeCompact"
+				showNoData="false">		
+				<headerToolbar>
+					<OverflowToolbar>
+						<Title titleStyle="H6" 
+							class="fakeLabel"
+							text="{i18n>documentCountLabel}: {documentsCount}"/>			
+						<ToolbarSpacer/>
+						<!--  Add the Personalization button -->
+						<Button icon="sap-icon://excel-attachment" 
+							press="onExcelExportButtonPressed" 
+							tooltip="{i18n>tableHeaderExportButtonTTP}">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>
+						<Button icon="sap-icon://action-settings" 
+							press="onTablePersonalizationButtonPressed" 
+							tooltip="{i18n>tableHeaderSettingsButtonTTP}">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>
+						<Button icon="sap-icon://sort" press="onTableSortingButtonPressed" tooltip="{i18n>tableHeaderSortingButtonTTP}">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>						
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column	
+						hAlign="Left">
+						<Text text="{i18n>docNumberLabel}" 
+							tooltip="{i18n>docNumberColumnTTP}"/>
+					</Column>
+					<Column 		
+						minScreenWidth="Tablet" 
+						demandPopin="true"	
+						hAlign="Center"	>
+						<Text text="{i18n>documentDateLabel}" 
+							tooltip="{i18n>docDateColumnTTP}"/>
+					</Column>
+					<Column			
+						minScreenWidth="Tablet" 
+						demandPopin="true"	
+						hAlign="End">
+						<Text text="{i18n>docAmountLabel}" 
+							tooltip="{i18n>docAmountColumnTTP}"/>
+					</Column>
+					<Column		
+						minScreenWidth="Tablet"		
+						demandPopin="true"	
+						hAlign="Center">
+						<Text text="{i18n>docStatusLabel}" 
+							tooltip="{i18n>docStatusColumnTTP}"/>
+					</Column>
+					<Column		
+						minScreenWidth="Tablet"		
+						demandPopin="true"	
+						hAlign="Center">
+						<Text text="{i18n>docAgentLabel}" 
+							tooltip="{i18n>docAgentColumnTTP}"/>
+					</Column>			
+				</columns>
+			</Table>
+			<!--DATA TABLE-->
+			<ScrollContainer
+				height="500px"
+				horizontal="false"
+				vertical="true"
+				focusable="true">			
+				<Table id="productsTable"
+					class="sapUiSizeCompact"
+					items="{SuspInvoices}">
+					<columns>
+						<Column id="docNumberCol"		
+							hAlign="Left"	
+							visible="{tempModel>/tableColumns/0/selected}">
+							<footer>
+								<Text text="{i18n>total}"></Text>
+							</footer>							
+						</Column>
+						<Column id="docDateCol" 		
+							minScreenWidth="Tablet" 
+							demandPopin="true"	
+							hAlign="Center"	
+							visible="{tempModel>/tableColumns/1/selected}">
+						</Column>
+						<Column id="amountCol"			
+							minScreenWidth="Tablet" 
+							demandPopin="true"	
+							hAlign="End"	
+							visible="{tempModel>/tableColumns/2/selected}">
+							<footer>
+								<ObjectNumber 
+									number="{
+										path: 'SuspInvoices',
+						            	formatter: '.formatter.totalFooterFormatter'
+									}" 
+									state="{
+										path: 'SuspInvoices',
+						            	formatter: '.formatter.totalColorFooterFormatter'
+									}" 
+									unit="{SuspInvoices/0/currency}" />
+							</footer>								
+						</Column>
+						<Column id="statusCol"		
+							minScreenWidth="Tablet"		
+							demandPopin="true"	
+							hAlign="Center"	
+							visible="{tempModel>/tableColumns/3/selected}">
+						</Column>
+						<Column id="agentCol"		
+							minScreenWidth="Tablet"		
+							demandPopin="true"	
+							hAlign="Center"	
+							visible="{tempModel>/tableColumns/4/selected}">
+						</Column>			
+					</columns>
+					<items>
+						<ColumnListItem
+							type="Inactive">
+							<cells>
+								<ObjectIdentifier title="{docNumber}" 
+									class="sapMTableContentMargin" />
+								<Text text="{
+										path:'docDate',
+										type: 'sap.ui.model.type.Date'
+									}" />
+								<ObjectNumber 
+									number="{
+										parts:[{path:'amount'},{path:'currency'}],
+										type: 'sap.ui.model.type.Currency',
+										formatOptions: {showMeasure: false}
+									}" 
+									unit="{currency}" />
+								<Text text="{
+										path: 'status',
+						            	formatter: '.formatter.statusFormatter'
+									}"/>
+								<Text text="{agent}"/>						
+							</cells>
+						</ColumnListItem>
+					</items>
+					<layoutData>
+						<l:GridData span="L12 M12 S12"
+							linebreak="true"/>
+					</layoutData>			
+				</Table>
+			</ScrollContainer>	
+		</l:Grid>	
+		<layoutData>
+			<l:GridData span="L12 M12 S12"
+				linebreak="true"/>
+		</layoutData>			
+	</HBox>				
+</core:FragmentDefinition>

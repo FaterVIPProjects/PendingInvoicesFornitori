@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="suppliersInputAssistedDialog"
+		title="{i18n>suppliersValueHelpDialogTitle}" 
+		class="sapUiPopupWithPadding"
+		items="{tempModel>/AssociatedSuppliers}"
+		noDataText=""
+		rememberSelections="true"
+		liveChange = "_handleSupplierLiveChangeSearch"
+		multiSelect="true"
+		search="_handleSupplierValueHelpSearch"
+		confirm="_handleSupplierValueHelpClose" 
+		cancel="_handleSupplierValueHelpClose">
+		<ObjectListItem title="{tempModel>supplierName}">
+			<attributes>
+				<ObjectAttribute text="{tempModel>supplierId}" />
+			</attributes>			
+		</ObjectListItem>
+    </SelectDialog>	
+</core:FragmentDefinition>

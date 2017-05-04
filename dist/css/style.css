@@ -1,0 +1,58 @@
+/* Bold property for "text" property of Attribute objects */
+.boldAttributeText .sapMObjectAttributeText {
+    font-weight: bold !important;
+}
+
+/*Fix for IE DatePicker top FilterBar*/
+html[data-sap-ui-browser^='ie'] .sapUiVlt {
+	vertical-align: text-top !important;
+}
+
+.fakeLabel span {
+	color: #666666 !important;
+}
+
+.foreground {
+	z-index: 101;
+}
+
+.selectError{  
+    border: 2px solid #e52929;  
+}
+
+/* Smaller Header */
+div[class*='sapMOHRBg']:only-child {
+	padding-bottom: 0rem !important;
+}
+
+.sapMOHR {
+    padding: 0rem 2rem 0 2rem !important;
+}
+
+.sapMOHRStates {
+    padding-top: 0rem !important;
+}
+
+.sapUiRespGrid.sapUiRespGridVSpace1>div {
+	margin-bottom: 0rem !important;
+}
+
+.sapMListTblHasNav .sapMListTblNavCol {
+    width: 1rem !important;
+}
+
+.sapMLIBImgNav {
+    width: 1rem !important;
+}
+
+.tableHeader table{
+    border-right: 20px solid #f7f7f7;
+}
+
+thead .sapMText {
+    font-weight: bold !important;
+}
+
+.sapMListTblCell {
+    vertical-align: middle;
+}
