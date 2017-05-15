@@ -6,8 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true,
-    "lastBuildDateTime": "Thu, 24 Nov 2016 10:13:18 GMT"
+    "buildRequired": false,
+    "lastBuildDateTime": "Mon, 15 May 2017 09:50:32 GMT"
   },
   "generation": [
     {
@@ -46,7 +46,7 @@
     "lastVersionWeTriedToDeploy": "1.0.4"
   },
   "deploy": {
-    "destination": "FaterPlayExtranet",
+    "destination": "ZVIP",
     "name": "Z_INVOICE_SUPP"
   },
   "mockpreview": {
