@@ -57,7 +57,7 @@
     "sap.ui5": {
         "_version": "1.1.0",
         "rootView": {
-            "viewName": "org.fater.app.view.Main",
+            "viewName": "org.fater.pendinginvoicessupplier.view.Main",
             "type": "XML"
         },
         "dependencies": {
@@ -76,7 +76,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "org.fater.app.i18n.i18n"
+                    "bundleName": "org.fater.pendinginvoicessupplier.i18n.i18n"
                 }
             },
             "oDataModel": {

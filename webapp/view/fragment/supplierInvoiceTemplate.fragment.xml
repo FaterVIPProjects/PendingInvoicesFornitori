@@ -25,10 +25,10 @@
 		</ObjectHeader>
 		
 		<!-- Opzione 1: visualizzazione con List di CustomListItem(s) -->
-		<!--<core:Fragment fragmentName="org.fater.app.view.fragment.listContent" type="XML" />-->
+		<!--<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.listContent" type="XML" />-->
 		
 		<!-- Opzione 2: visualizzazione con ResponsiveTable -->
-		<core:Fragment fragmentName="org.fater.app.view.fragment.tableContent" type="XML" />
+		<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.tableContent" type="XML" />
 <!--		<VBox height="250px" visible="{lastSupplier}" />-->
 	</l:Grid>	
 </core:FragmentDefinition>

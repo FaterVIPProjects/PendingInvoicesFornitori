@@ -48,7 +48,7 @@ sap.ui.define([
 			
 			var sLanguage = sap.ui.getCore().getConfiguration().getLanguage(),
 				bIsItalian = sLanguage.indexOf("it") !== -1,
-				sRootPah = jQuery.sap.getModulePath("org.fater.app");
+				sRootPah = jQuery.sap.getModulePath("org.fater.pendinginvoicessupplier");
 			
 			var oBundle = jQuery.sap.resources({
 				url : sRootPah + "/i18n/i18n.properties", 

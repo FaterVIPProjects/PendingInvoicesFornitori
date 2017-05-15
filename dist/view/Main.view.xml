@@ -1,5 +1,5 @@
 <mvc:View 
-	controllerName="org.fater.app.controller.Main" 
+	controllerName="org.fater.pendinginvoicessupplier.controller.Main" 
 	xmlns:html="http://www.w3.org/1999/xhtml" 
 	xmlns:mvc="sap.ui.core.mvc" 
 	xmlns:core="sap.ui.core" 
@@ -116,7 +116,7 @@
 						<items>
 							<IconTabFilter
 								text="{supplierId}">
-								<core:Fragment fragmentName="org.fater.app.view.fragment.supplierInvoiceTemplate" type="XML" />
+								<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.supplierInvoiceTemplate" type="XML" />
 							</IconTabFilter>
 						</items>
 					</IconTabBar>-->
@@ -132,7 +132,7 @@
 									<a:ObjectPageSubSection mode="Expanded"
 										title="{supplierId}">
 										<a:blocks>
-											<core:Fragment fragmentName="org.fater.app.view.fragment.supplierInvoiceTemplate" type="XML" />
+											<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.supplierInvoiceTemplate" type="XML" />
 										</a:blocks>
 									</a:ObjectPageSubSection>
 								</a:subSections>

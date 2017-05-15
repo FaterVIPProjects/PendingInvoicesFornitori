@@ -6,7 +6,7 @@
         "type": "SAP_UI5_Component",
         "componentUrl": "/",
         "appUrl": "#faterpendinginvoices-Display",
-        "navigationComponentName": "org.fater.app",
+        "navigationComponentName": "org.fater.pendinginvoicessupplier",
         "intentSemanticObject": "fater-pending-invoices",
         "intentAction": "Display",
         "html5ApplicationName": "faterpendinginvoices",

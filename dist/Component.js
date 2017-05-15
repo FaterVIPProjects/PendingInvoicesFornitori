@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"org/fater/app/model/models"
+	"org/fater/pendinginvoicessupplier/model/models"
 ], function(UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("org.fater.app.Component", {
+	return UIComponent.extend("org.fater.pendinginvoicessupplier.Component", {
 
 		metadata: {
 			manifest: "json"
