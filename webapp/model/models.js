@@ -63,23 +63,28 @@ sap.ui.define([
 				tableColumns:[
 					{
 						name: oBundle.getText("docNumberLabel"),
-						selected: true
+						selected: true,
+						visible: false
 					},
 					{
 						name: oBundle.getText("documentDateLabel"),
-						selected: true
+						selected: true,
+						visible: true
 					},
 					{
 						name: oBundle.getText("docAmountLabel"),
-						selected: true
+						selected: true,
+						visible: true
 					},
 					{
 						name: oBundle.getText("docStatusLabel"),
-						selected: true
+						selected: true,
+						visible: true
 					},
 					{
 						name: oBundle.getText("docAgentLabel"),
-						selected: true
+						selected: true,
+						visible: true
 					}					
 				],
 				sortItems:[

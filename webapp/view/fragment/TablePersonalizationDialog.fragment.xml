@@ -10,7 +10,9 @@
 				<items>
 					<StandardListItem 
 						title="{tempModel>name}" 
-						selected="{tempModel>selected}"/>	
+						selected="{tempModel>selected}"
+						visible="{tempModel>visible}"
+						/>	
 				</items><!-- sap.m.ListItemBase -->
 			</List>
 			

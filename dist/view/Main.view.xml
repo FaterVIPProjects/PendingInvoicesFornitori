@@ -1,114 +1,62 @@
-<mvc:View 
-	controllerName="org.fater.pendinginvoicessupplier.controller.Main" 
-	xmlns:html="http://www.w3.org/1999/xhtml" 
-	xmlns:mvc="sap.ui.core.mvc" 
-	xmlns:core="sap.ui.core" 
-	xmlns:l="sap.ui.layout"
-	xmlns:a="sap.uxap"	
-	xmlns="sap.m"
+<mvc:View controllerName="org.fater.pendinginvoicessupplier.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:a="sap.uxap" xmlns="sap.m"
 	xmlns:fb="sap.ui.comp.filterbar">
 	<App>
 		<pages>
-			<Page showHeader="false"
-				enableScrolling="false">
+			<Page showHeader="false" enableScrolling="false">
 				<content>
-					
-					<fb:FilterBar id="supplierFilterBar" 
-						header="{i18n>appTitle}"
-						reset="onFilterBarReset" 
-						search="onFilterBarSearch" 
-						clear="onFilterBarReset" 
-						filterContainerWidth="23%"
-						showRestoreButton="true" 
-						showClearButton="false"
-						showClearOnFB="false"
-						advancedMode="true"
-						>
-						
+					<fb:FilterBar id="supplierFilterBar" header="{i18n>appTitle}" reset="onFilterBarReset" search="onFilterBarSearch" clear="onFilterBarReset"
+						filterContainerWidth="23%" 
+						showRestoreButton="false" showClearButton="false" showClearOnFB="false" advancedMode="false">
 						<fb:filterItems>
-							
+							<fb:FilterItem name="F0" label="{i18n>typeCompanyFilterLabel}">
+								<fb:control>
+									<Select enabled="false">
+										<core:Item key="20" text="FATER S.P.A."/>
+									</Select>
+								</fb:control>
+							</fb:FilterItem>
 							<!-- Suppliers selection -->
 							<fb:FilterItem name="A0" label="{i18n>supplierFilterLabel}" mandatory="true">
 								<fb:control>
-									<MultiInput
-										id="supplierFilterInput"
-										editable="false"
-										type="Text"
-										placeholder="{i18n>supplierFilterInputPlaceholder}"
-										showSuggestion="true"
-										showValueHelp="true"
-										valueHelpRequest="handleSupplierValueHelpPress"
-										suggest="_handleSuggest"
-										suggestionItemSelected="handleSuggestionSelected"
-										suggestionItems="{tempModel>/AssociatedSuppliers}"
-										enableMultiLineMode="true"
-										tokens="{/filters/suppliers}"
-										tokenChange="_handleDeleteSupplierToken"
-										tooltip="{i18n>supplierFilterInputTTP}">
+									<MultiInput id="supplierFilterInput" editable="false" type="Text" placeholder="{i18n>supplierFilterInputPlaceholder}" showSuggestion="true"
+										showValueHelp="true" valueHelpRequest="handleSupplierValueHelpPress" suggest="_handleSuggest"
+										suggestionItemSelected="handleSuggestionSelected" suggestionItems="{tempModel>/AssociatedSuppliers}" enableMultiLineMode="true"
+										tokens="{/filters/suppliers}" tokenChange="_handleDeleteSupplierToken" tooltip="{i18n>supplierFilterInputTTP}">
 										<suggestionItems>
 											<core:Item text="{tempModel>supplierName}" key="{tempModel>supplierId}/{tempModel>paymentConditions}"/>
-										</suggestionItems>										
+										</suggestionItems>
 										<tokens>
-											<Token text="{supplierName}"
-												key="{supplierId}"/>
+											<Token text="{supplierName}" key="{supplierId}"/>
 										</tokens>
 									</MultiInput>
 								</fb:control>
 							</fb:FilterItem>
-
-							<fb:FilterItem name="F0" label="{i18n>typeCompanyFilterLabel}">
-								<fb:control>
-									<Select enabled="false">
-										<core:Item key="20" text="FATER S.P.A." />
-									</Select>
-								</fb:control>
-							</fb:FilterItem>	
-							
 							<!-- Start date -->
 							<fb:FilterItem name="B0" label="{i18n>lowerBoundDateFilterLabel}">
 								<fb:control>
-									<DatePicker
-										id="filterLowerBoundDatePicker"
-										placeholder="{i18n>lowerBoundDatePlaceholder}"
-										value="{/filters/lowerBound}" 
-										displayFormat="dd.MM.yyyy"
-										change="handleDatePickerChange"
-										class="sapUiSmallMarginBottom"
-										tooltip="{i18n>filterLowerBoundDatePickerTTP}"/>
+									<DatePicker id="filterLowerBoundDatePicker" placeholder="{i18n>lowerBoundDatePlaceholder}" value="{/filters/lowerBound}"
+										displayFormat="dd.MM.yyyy" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterLowerBoundDatePickerTTP}"/>
 								</fb:control>
 							</fb:FilterItem>
-							
 							<!-- End date -->
 							<fb:FilterItem name="C0" label="{i18n>upperBoundDateFilterLabel}">
 								<fb:control>
-									<DatePicker
-										id="filterUpperBoundDatePicker"
-										placeholder="{i18n>upperBoundDatePlaceholder}"
-										value="{/filters/upperBound}" 
-										displayFormat="dd.MM.yyyy"
-										change="handleDatePickerChange"
-										class="sapUiSmallMarginBottom"
-										tooltip="{i18n>filterUpperBoundDatePickerTTP}"/>
+									<DatePicker id="filterUpperBoundDatePicker" placeholder="{i18n>upperBoundDatePlaceholder}" value="{/filters/upperBound}"
+										displayFormat="dd.MM.yyyy" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterUpperBoundDatePickerTTP}"/>
 								</fb:control>
 							</fb:FilterItem>
-							
 							<!-- Invoice number -->
 							<fb:FilterItem name="D0" label="{i18n>invoiceNumberFilterLabel}">
 								<fb:control>
-									<Input 
-										type="Text" 
-										value="{/filters/invoiceNumber}" 
-										placeholder="{i18n>invoiceNumberInputPlaceholder}"
+									<Input type="Text" value="{/filters/invoiceNumber}" placeholder="{i18n>invoiceNumberInputPlaceholder}"
 										tooltip="{i18n>invoiceNumberFilterTTP}"/>
 								</fb:control>
 							</fb:FilterItem>
-
 						</fb:filterItems>
 					</fb:FilterBar>
-					
 					<!-- Invoices list -->
-					
-<!--					<IconTabBar
+					<!--					<IconTabBar
 						id="idIconTabBarNoIcons"
 						class="sapUiResponsiveContentPadding"
 						visible="{tempModel>/config/dataLoaded}"
@@ -120,37 +68,25 @@
 							</IconTabFilter>
 						</items>
 					</IconTabBar>-->
-					
-					<a:ObjectPageLayout id="detailPage"
-						alwaysShowContentHeader="true"
-						sections="{/invoices}"
-						height="85%"
-						>
+					<a:ObjectPageLayout id="detailPage" alwaysShowContentHeader="true" sections="{/invoices}" height="85%">
 						<a:sections>
 							<a:ObjectPageSection visible="{visible}">
 								<a:subSections>
-									<a:ObjectPageSubSection mode="Expanded"
-										title="{supplierId}">
+									<a:ObjectPageSubSection mode="Expanded" title="{supplierId}">
 										<a:blocks>
-											<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.supplierInvoiceTemplate" type="XML" />
+											<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.supplierInvoiceTemplate" type="XML"/>
 										</a:blocks>
 									</a:ObjectPageSubSection>
 								</a:subSections>
-							</a:ObjectPageSection>											
+							</a:ObjectPageSection>
 						</a:sections>
 					</a:ObjectPageLayout>
 				</content>
-		
 				<!-- Page Footer (Export all to CSV) -->
 				<footer>
-					<Toolbar visible="{tempModel>/config/dataLoaded}"
-						class="foreground">
+					<Toolbar visible="{tempModel>/config/dataLoaded}" class="foreground">
 						<ToolbarSpacer/>
-						<Button 
-							text="{i18n>exportAllButtonLabel}" 
-							icon="sap-icon://excel-attachment"
-							press="onExportAllPress"
-							tooltip="{i18n>exportAllButtonTTP}" />
+						<Button text="{i18n>exportAllButtonLabel}" icon="sap-icon://excel-attachment" press="onExportAllPress" tooltip="{i18n>exportAllButtonTTP}"/>
 					</Toolbar>
 				</footer>
 			</Page>
