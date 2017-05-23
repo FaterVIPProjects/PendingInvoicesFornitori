@@ -14,7 +14,7 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function() {
-			this._arrayFilterWidth = ["23%", "23%", "15%", "12%", "12%", "15%"];
+			this._arrayFilterWidth = ["23%", "15%", "35%", "12%", "12%", "15%", "20%"];
 			var filterBar = this.getView().byId("supplierFilterBar");
 			var content = filterBar.getContent()[1];
 			for (var i = 0; content.getContent()[i]; i++) {

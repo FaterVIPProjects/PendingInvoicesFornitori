@@ -6,8 +6,7 @@
 			<Page showHeader="false" enableScrolling="false">
 				<content>
 					<fb:FilterBar id="supplierFilterBar" header="{i18n>appTitle}" reset="onFilterBarReset" search="onFilterBarSearch" clear="onFilterBarReset"
-						filterContainerWidth="23%" 
-						showRestoreButton="false" showClearButton="false" showClearOnFB="false" advancedMode="false">
+						filterContainerWidth="23%" showRestoreButton="false" showClearButton="false" showClearOnFB="false" advancedMode="false">
 						<fb:filterItems>
 							<fb:FilterItem name="F0" label="{i18n>typeCompanyFilterLabel}">
 								<fb:control>
