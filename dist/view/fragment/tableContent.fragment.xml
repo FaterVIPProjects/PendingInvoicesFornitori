@@ -138,7 +138,9 @@
 										type: 'sap.ui.model.type.Currency',
 										formatOptions: {showMeasure: false}
 									}" 
-									unit="{currency}" />
+									unit="{currency}" 
+									state="{=${amount}>0 ? 'Success' : 'Error'}"
+									/>
 								<Text text="{
 										path: 'status',
 						            	formatter: '.formatter.statusFormatter'

@@ -6,8 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true,
-    "lastBuildDateTime": "Mon, 22 May 2017 08:38:00 GMT"
+    "buildRequired": false,
+    "lastBuildDateTime": "Thu, 25 May 2017 08:23:42 GMT"
   },
   "generation": [
     {
@@ -35,7 +35,7 @@
     }
   },
   "codeCheckingTriggers": {
-    "notifyBeforePush": true,
+    "notifyBeforePush": false,
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"

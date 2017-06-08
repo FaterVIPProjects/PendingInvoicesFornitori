@@ -8,6 +8,11 @@ html[data-sap-ui-browser^='ie'] .sapUiVlt {
 	vertical-align: text-top !important;
 }
 
+/* Fix separatore per Criterio di ordinamento */
+.sapMVSDUpperList {
+    border-bottom: 4px solid #000000;
+}
+
 .fakeLabel span {
 	color: #666666 !important;
 }

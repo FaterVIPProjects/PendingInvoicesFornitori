@@ -4,7 +4,7 @@
 		class="sapUiPopupWithPadding"
 		items="{tempModel>/AssociatedSuppliers}"
 		noDataText=""
-		rememberSelections="true"
+		rememberSelections="false"
 		liveChange = "_handleSupplierLiveChangeSearch"
 		multiSelect="true"
 		search="_handleSupplierValueHelpSearch"

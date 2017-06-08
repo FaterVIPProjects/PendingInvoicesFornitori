@@ -14,7 +14,7 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function() {
-			this._arrayFilterWidth = ["23%", "23%", "15%", "12%", "12%", "15%"];
+			this._arrayFilterWidth = ["23%", "15%", "35%", "12%", "12%", "15%", "20%"];
 			var filterBar = this.getView().byId("supplierFilterBar");
 			var content = filterBar.getContent()[1];
 			for (var i = 0; content.getContent()[i]; i++) {
@@ -39,7 +39,7 @@ sap.ui.define([
 			var oModel = oView.getModel();
 			var oTempModel = oView.getModel("tempModel");
 			var associatedSupplier = [];
-			var supplierName = "FOR_0000852";
+			var supplierName = "FOR_0001472";
 
 			try {
 				var userShell = sap.ushell.Container.getService("UserInfo").getUser();
