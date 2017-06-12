@@ -804,7 +804,7 @@ sap.ui.define([
 
 		_downloadCSVFile: function(sReportTitle, sCSV) {
 			//this will remove the blank-spaces from the title and replace it with an underscore
-			var sFileName = sReportTitle.replace(/ /g, "_") + ".csv";
+			var sFileName = sReportTitle.replace(/ /g, "_");
 			// Internet Explorer 6-11
 			var isIE = /*@cc_on!@*/ false || !!document.documentMode;
 			if (isIE === true) {
