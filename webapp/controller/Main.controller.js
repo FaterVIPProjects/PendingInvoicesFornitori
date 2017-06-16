@@ -752,10 +752,12 @@ sap.ui.define([
 
 				row += oBundle.getText("docNumberLabel") + ";" +
 					oBundle.getText("documentDateLabel") + ";" +
+					oBundle.getText("docDueDate") + ";" +
 					oBundle.getText("docAmountLabel") + ";" +
 					"" /* Empty column header for currency*/ + ";" +
 					oBundle.getText("docStatusLabel") + ";" +
-					oBundle.getText("docAgentLabel");
+					oBundle.getText("docAgentLabel") + ";" +
+					oBundle.getText("docAgentEmail");
 
 				//append Label row with line break
 				sCSV += row + '\r\n';
@@ -765,6 +767,7 @@ sap.ui.define([
 
 					var dateType = new sap.ui.model.type.Date();
 					var date = dateType.formatValue(aLines[i].docDate, "string");
+					var dueDate = dateType.formatValue(aLines[i].dueDate, "string");
 					var change = [];
 					var sInternalType = "string";
 					var amount1 = new sap.ui.model.type.Currency({
@@ -786,10 +789,12 @@ sap.ui.define([
 					row = "";
 					row += ((aLines[i].docNumber) ? aLines[i].docNumber : " ") + ";" +
 						((date) ? date : " ") + ";" +
+						((dueDate) ? dueDate : " ") + ";" +
 						((amount) ? amount : " ") + ";" +
 						((aLines[i].currency) ? aLines[i].currency : " ") + ";" +
 						((status) ? status : " ") + ";" +
-						((aLines[i].agent) ? aLines[i].agent : " ");
+						((aLines[i].agent) ? aLines[i].agent : " ") + ";" +
+						((aLines[i].eMail) ? aLines[i].eMail : " ");
 
 					// row.slice(0, row.length - 1);
 

@@ -71,6 +71,11 @@ sap.ui.define([
 						selected: true,
 						visible: true
 					},
+										{
+						name: oBundle.getText("docDueDate"),
+						selected: true,
+						visible:true
+					},
 					{
 						name: oBundle.getText("docAmountLabel"),
 						selected: true,
@@ -85,7 +90,12 @@ sap.ui.define([
 						name: oBundle.getText("docAgentLabel"),
 						selected: true,
 						visible: true
-					}					
+					},
+					{
+						name: oBundle.getText("docAgentEmail"),
+						selected: true,
+						visible:true
+					}
 				],
 				sortItems:[
 					{
@@ -97,6 +107,11 @@ sap.ui.define([
 						name: oBundle.getText("documentDateLabel"),
 						selected: false,
 						key: "docDate"
+					},
+					{
+						name: oBundle.getText("docDueDate"),
+						selected: false,
+						key: "dueDate"
 					},
 					{
 						name: oBundle.getText("docAmountLabel"),
@@ -112,7 +127,12 @@ sap.ui.define([
 						name: oBundle.getText("docAgentLabel"),
 						selected: false,
 						key: "agent"
-					}					
+					},
+					{
+						name: oBundle.getText("docAgentEmail"),
+						selected: false,
+						key: "eMail"
+					}
 				]	
 				
 			});

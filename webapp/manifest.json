@@ -15,20 +15,20 @@
 			"version": "0.0.0"
 		},
 		"dataSources": {
-			"ZVIP_PAYMENTTRACK_SRV": {
-				"uri": "/sap/opu/odata/sap/ZVIP_PAYMENTTRACK_SRV/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/ZVIP_PAYMENTTRACK_SRV/metadata.xml"
-				}
-			},
 			"ZVIP_PROJECT_SRV": {
 				"uri": "/sap/opu/odata/sap/ZVIP_PROJECT_SRV/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
 					"localUri": "localService/ZVIP_PROJECT_SRV/metadata.xml"
+				}
+			},
+			"ZVIP_PAYMENTTRACK_SRV": {
+				"uri": "/sap/opu/odata/sap/ZVIP_PAYMENTTRACK_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZVIP_PAYMENTTRACK_SRV/metadata.xml"
 				}
 			}
 		}

@@ -25,6 +25,9 @@
             "name": "extended_runnable_file.html"
         },
         {
+            "name": "localService/metadata.xml"
+        },
+        {
             "name": "localService/ZVIP_PROJECT_SRV/metadata.xml"
         },
         {

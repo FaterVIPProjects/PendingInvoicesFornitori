@@ -6,8 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true,
-    "lastBuildDateTime": "Mon, 12 Jun 2017 06:18:11 GMT"
+    "buildRequired": false,
+    "lastBuildDateTime": "Fri, 16 Jun 2017 12:03:47 GMT"
   },
   "generation": [
     {
@@ -18,7 +18,7 @@
     {
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
-      "dateTimeStamp": "Fri, 03 Mar 2017 09:31:54 GMT"
+      "dateTimeStamp": "Fri, 16 Jun 2017 11:42:08 GMT"
     }
   ],
   "translation": {
@@ -50,7 +50,7 @@
     "name": "Z_INVOICE_SUPP"
   },
   "mockpreview": {
-    "mockUri": "/sap/opu/odata/sap/ZVIP_PROJECT_SRV",
+    "mockUri": "/sap/opu/odata/sap/ZVIP_PAYMENTTRACK_SRV",
     "metadataFilePath": "model/metadata.xml",
     "loadJSONFiles": false,
     "loadCustomRequests": false,
