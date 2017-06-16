@@ -39,7 +39,7 @@ sap.ui.define([
 			var oModel = oView.getModel();
 			var oTempModel = oView.getModel("tempModel");
 			var associatedSupplier = [];
-			var supplierName = "FOR_0001472";
+			var supplierName = "FOR_0001543";
 
 			try {
 				var userShell = sap.ushell.Container.getService("UserInfo").getUser();
@@ -479,7 +479,10 @@ sap.ui.define([
 				oDateFrom = oModel.getProperty("/filters/lowerBoundDate"),
 				oDateTo = oModel.getProperty("/filters/upperBoundDate"),
 				sInvNumber = oModel.getProperty("/filters/invoiceNumber");
-
+			
+			// FIX AS 13-06-2017: Il primo SupplierID deve essere sostituito col LIFNR
+			aSuppliers[0].supplierId = aSuppliers[0].Lifnr;
+			
 			if (aSuppliers.length === 0) {
 				MessageBox.error(
 					oBundle.getText("noSupplierSelectedErrorMessage")
