@@ -2,7 +2,7 @@
 	<HBox>
 		<l:Grid defaultSpan="L12 M12 S12">
 			<!--HEADER TABLE-->
-			<Table class="tableHeader sapUiSizeCompact"
+			<Table id="tableContent" class="tableHeader sapUiSizeCompact"
 				showNoData="false">		
 				<headerToolbar>
 					<OverflowToolbar>
@@ -34,48 +34,62 @@
 				</headerToolbar>
 				<columns>
 					<Column	
-						hAlign="Left">
+						hAlign="Left"
+						width="20%"
+						>
 						<Text text="{i18n>docNumberLabel}" 
 							tooltip="{i18n>docNumberColumnTTP}"/>
 					</Column>
 					<Column 		
 						minScreenWidth="Tablet" 
 						demandPopin="true"	
-						hAlign="Center"	>
+						hAlign="Center"	
+						width="10%"
+						>
 						<Text text="{i18n>documentDateLabel}" 
 							tooltip="{i18n>docDateColumnTTP}"/>
 					</Column>
 					<Column		
 						minScreenWidth="Tablet"		
 						demandPopin="true"	
-						hAlign="Center">
+						hAlign="Center"
+						width="10%"
+						>
 						<Text text="{i18n>docDueDate}" />
 					</Column>
 					<Column			
 						minScreenWidth="Tablet" 
 						demandPopin="true"	
-						hAlign="End">
+						hAlign="End"
+						width="15%"
+						>
 						<Text text="{i18n>docAmountLabel}" 
 							tooltip="{i18n>docAmountColumnTTP}"/>
 					</Column>
 					<Column		
 						minScreenWidth="Tablet"		
 						demandPopin="true"	
-						hAlign="Center">
+						hAlign="Center"
+						width="10%"
+						>
 						<Text text="{i18n>docStatusLabel}" 
 							tooltip="{i18n>docStatusColumnTTP}"/>
 					</Column>
 					<Column		
 						minScreenWidth="Tablet"		
 						demandPopin="true"	
-						hAlign="Center">
+						hAlign="Center"
+						width="10%"
+						>
 						<Text text="{i18n>docAgentLabel}" 
 							tooltip="{i18n>docAgentColumnTTP}"/>
 					</Column>	
 					<Column		
 						minScreenWidth="Tablet"		
 						demandPopin="true"	
-						hAlign="Center">
+						hAlign="Center"
+						width="25%"
+						>
 						<Text text="{i18n>docAgentEmail}" 
 							tooltip="{i18n>docAgentColumnTTP}"/>
 					</Column>	
@@ -92,8 +106,10 @@
 					items="{SuspInvoices}">
 					<columns>
 						<Column id="docNumberCol"		
-							hAlign="Left"	
-							visible="{tempModel>/tableColumns/0/selected}">
+							hAlign="Left"
+							visible="{tempModel>/tableColumns/0/selected}"
+							width="20%"
+							>
 							<footer>
 								<Text text="{i18n>total}"></Text>
 							</footer>							
@@ -102,19 +118,25 @@
 							minScreenWidth="Tablet" 
 							demandPopin="true"	
 							hAlign="Center"	
-							visible="{tempModel>/tableColumns/1/selected}">
+							visible="{tempModel>/tableColumns/1/selected}"
+							width="10%"
+							>
 						</Column>
 						<Column id="docDueDateCol" 		
 							minScreenWidth="Tablet" 
 							demandPopin="true"	
 							hAlign="Center"	
-							visible="{tempModel>/tableColumns/2/selected}">
+							visible="{tempModel>/tableColumns/2/selected}"
+							width="10%"
+							>
 						</Column>
 						<Column id="amountCol"			
 							minScreenWidth="Tablet" 
 							demandPopin="true"	
 							hAlign="End"	
-							visible="{tempModel>/tableColumns/3/selected}">
+							visible="{tempModel>/tableColumns/3/selected}"
+							width="15%"
+							>
 							<footer>
 								<ObjectNumber 
 									number="{
@@ -132,19 +154,25 @@
 							minScreenWidth="Tablet"		
 							demandPopin="true"	
 							hAlign="Center"	
-							visible="{tempModel>/tableColumns/4/selected}">
+							visible="{tempModel>/tableColumns/4/selected}"
+							width="10%"
+							>
 						</Column>
 						<Column id="agentCol"		
 							minScreenWidth="Tablet"		
 							demandPopin="true"	
 							hAlign="Center"	
-							visible="{tempModel>/tableColumns/5/selected}">
+							visible="{tempModel>/tableColumns/5/selected}"
+							width="10%"
+							>
 						</Column>
 						<Column id="agentEmailCol"		
 							minScreenWidth="Tablet"		
 							demandPopin="true"	
 							hAlign="Center"	
-							visible="{tempModel>/tableColumns/6/selected}">
+							visible="{tempModel>/tableColumns/6/selected}"
+							width="25%"
+							>
 						</Column>
 					</columns>
 					<items>

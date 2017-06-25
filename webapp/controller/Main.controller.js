@@ -549,6 +549,7 @@ sap.ui.define([
 			var mParameters = {
 				filters: aFilters,
 				success: function(oData) {
+					
 					var aInvoices = aSuppliers;
 					for (var x = 0; aInvoices[x]; x++) {
 						aInvoices[x].visible = false;
@@ -607,7 +608,10 @@ sap.ui.define([
 					if (oDateFrom) {
 						oDateFrom.setHours(oDateFrom.getHours() - 12);
 					}
-
+					
+					// FIX AS: Split fornitori per Divisa
+					aInvoices = utils.splitSuppliersForCurrency(aInvoices);
+					
 					oModel.setProperty(
 						"/invoices",
 						aInvoices

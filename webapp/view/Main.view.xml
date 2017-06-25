@@ -34,15 +34,15 @@
 							<!-- Start date -->
 							<fb:FilterItem name="B0" label="{i18n>lowerBoundDateFilterLabel}">
 								<fb:control>
-									<DatePicker id="filterLowerBoundDatePicker" placeholder="{i18n>lowerBoundDatePlaceholder}" value="{/filters/lowerBound}"
-										displayFormat="dd.MM.yyyy" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterLowerBoundDatePickerTTP}"/>
+									<DatePicker id="filterLowerBoundDatePicker" valueFormat="{i18n>lowerBoundDatePlaceholder}" displayFormat="{i18n>lowerBoundDatePlaceholder}"
+										value="{/filters/lowerBound}" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterLowerBoundDatePickerTTP}"/>
 								</fb:control>
 							</fb:FilterItem>
 							<!-- End date -->
 							<fb:FilterItem name="C0" label="{i18n>upperBoundDateFilterLabel}">
 								<fb:control>
-									<DatePicker id="filterUpperBoundDatePicker" placeholder="{i18n>upperBoundDatePlaceholder}" value="{/filters/upperBound}"
-										displayFormat="dd.MM.yyyy" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterUpperBoundDatePickerTTP}"/>
+									<DatePicker id="filterUpperBoundDatePicker" valueFormat="{i18n>upperBoundDatePlaceholder}" displayFormat="{i18n>upperBoundDatePlaceholder}"
+										value="{/filters/upperBound}" change="handleDatePickerChange" class="sapUiSmallMarginBottom" tooltip="{i18n>filterUpperBoundDatePickerTTP}"/>
 								</fb:control>
 							</fb:FilterItem>
 							<!-- Invoice number -->
@@ -71,7 +71,7 @@
 						<a:sections>
 							<a:ObjectPageSection visible="{visible}">
 								<a:subSections>
-									<a:ObjectPageSubSection mode="Expanded" title="{supplierId}">
+									<a:ObjectPageSubSection mode="Expanded" title="{supplierId} ({SuspInvoices/0/currency})">
 										<a:blocks>
 											<core:Fragment fragmentName="org.fater.pendinginvoicessupplier.view.fragment.supplierInvoiceTemplate" type="XML"/>
 										</a:blocks>
