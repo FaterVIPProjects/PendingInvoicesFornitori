@@ -1,62 +1,14 @@
 {
     "resources": [
         {
-            "name": "view/fragment/TablePersonalizationDialog.fragment.xml"
-        },
-        {
-            "name": "view/fragment/ViewSettingsDialog.fragment.xml"
-        },
-        {
-            "name": "view/fragment/tableContent.fragment.xml"
-        },
-        {
-            "name": "view/fragment/supplierInvoiceTemplate.fragment.xml"
-        },
-        {
-            "name": "view/fragment/InputAssistedDialog.fragment.xml"
-        },
-        {
-            "name": "view/Main.view.xml"
-        },
-        {
-            "name": "model/models.js"
-        },
-        {
-            "name": "extended_runnable_file.html"
-        },
-        {
-            "name": "localService/metadata.xml"
-        },
-        {
-            "name": "localService/ZVIP_PROJECT_SRV/metadata.xml"
-        },
-        {
-            "name": "localService/ZVIP_PAYMENTTRACK_SRV/metadata.xml"
-        },
-        {
-            "name": "index.html"
-        },
-        {
             "name": "css/style.css"
         },
         {
-            "name": "util/utils.js"
-        },
-        {
-            "name": "util/formatter.js"
-        },
-        {
-            "name": "controller/Main.controller.js"
-        },
-        {
-            "name": "Component.js"
-        },
-        {
-            "name": "i18n/i18n_en.properties",
+            "name": "i18n/i18n.properties",
             "raw": "i18n/i18n.properties"
         },
         {
-            "name": "i18n/i18n.properties",
+            "name": "i18n/i18n_en.properties",
             "raw": "i18n/i18n.properties"
         },
         {
@@ -65,6 +17,54 @@
         },
         {
             "name": "manifest.json"
+        },
+        {
+            "name": "util/utils.js"
+        },
+        {
+            "name": "util/formatter.js"
+        },
+        {
+            "name": "view/Main.view.xml"
+        },
+        {
+            "name": "view/fragment/tableContent.fragment.xml"
+        },
+        {
+            "name": "view/fragment/ViewSettingsDialog.fragment.xml"
+        },
+        {
+            "name": "view/fragment/InputAssistedDialog.fragment.xml"
+        },
+        {
+            "name": "view/fragment/TablePersonalizationDialog.fragment.xml"
+        },
+        {
+            "name": "view/fragment/supplierInvoiceTemplate.fragment.xml"
+        },
+        {
+            "name": "localService/ZVIP_PROJECT_SRV/metadata.xml"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/ZVIP_PAYMENTTRACK_SRV/metadata.xml"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "controller/Main.controller.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "model/models.js"
         },
         {
             "name": "Component-preload.js",

@@ -39,7 +39,9 @@ sap.ui.define([
 			var oModel = oView.getModel();
 			var oTempModel = oView.getModel("tempModel");
 			var associatedSupplier = [];
-			var supplierName = "FOR_0001543";
+			//var supplierName = "FOR_0001543"; //VIDEOJET ITALIA S.r.l.
+			//var supplierName = "FOR_0001545"; //CASA DEL BULLONE SAS FALCONE
+			var supplierName = "FOR_0001592"; //GP CELLULOSE GMBH
 
 			try {
 				var userShell = sap.ushell.Container.getService("UserInfo").getUser();

@@ -39,7 +39,9 @@ sap.ui.define([
 			var oModel = oView.getModel();
 			var oTempModel = oView.getModel("tempModel");
 			var associatedSupplier = [];
-			var supplierName = "FOR_0001543";
+			//var supplierName = "FOR_0001543"; //VIDEOJET ITALIA S.r.l.
+			//var supplierName = "FOR_0001545"; //CASA DEL BULLONE SAS FALCONE
+			var supplierName = "FOR_0001592"; //GP CELLULOSE GMBH
 
 			try {
 				var userShell = sap.ushell.Container.getService("UserInfo").getUser();
@@ -549,6 +551,7 @@ sap.ui.define([
 			var mParameters = {
 				filters: aFilters,
 				success: function(oData) {
+					
 					var aInvoices = aSuppliers;
 					for (var x = 0; aInvoices[x]; x++) {
 						aInvoices[x].visible = false;
@@ -607,7 +610,10 @@ sap.ui.define([
 					if (oDateFrom) {
 						oDateFrom.setHours(oDateFrom.getHours() - 12);
 					}
-
+					
+					// FIX AS: Split fornitori per Divisa
+					aInvoices = utils.splitSuppliersForCurrency(aInvoices);
+					
 					oModel.setProperty(
 						"/invoices",
 						aInvoices
